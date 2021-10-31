@@ -18,7 +18,7 @@ const Testimonial = (props) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{description}</Card.Text>
-          <h6 className="text-danger">Customer</h6>
+          <h6 className="text-danger">Traveler</h6>
         </Card.Body>
       </Card>
     </Col>

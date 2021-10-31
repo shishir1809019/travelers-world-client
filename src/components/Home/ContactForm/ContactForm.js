@@ -5,7 +5,7 @@ import "./ContactForm.css";
 const ContactForm = () => {
   return (
     <div className="container">
-      <h3 className="text-center my-5">Contact Form</h3>
+      <h1 className="text-center my-5">Contact Form</h1>
       <Form>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="formGridPassword">

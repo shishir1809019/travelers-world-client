@@ -11,27 +11,27 @@ const Testimonials = () => {
       id: 1,
       name: "Falica L. Brooks",
       description:
-        "This is just a awesome website for its nice customer service.",
+        "This is just a awesome website for  ticket booking service.",
       img: testimonial1,
     },
     {
       id: 2,
       name: "Heidi J. Cobb",
       description:
-        "I dod't not find my delivery till now. I am waiting for my medicine",
+        "I dod't not find my any email of confirmation . Please response",
       img: testimonial2,
     },
     {
       id: 3,
       name: "Franke C.McGee",
       description:
-        "Awesome there medicine price is too relevant. This is useful for us",
+        "Awesome there ticket price is too relevant. This is useful for us",
       img: testimonial3,
     },
   ];
   return (
-    <div className=" bg-dark text-light py-2">
-      <h1 className="text-center my-5">Client Testimonials</h1>
+    <div className=" bg-light text-light py-2">
+      <h1 className="text-center text-dark my-5">Client Testimonials</h1>
       <Row xs={1} md={3} className="g-4 mt-3 container mx-auto">
         {data.map((feedback) => (
           <Testimonial key={feedback.id} feedback={feedback}></Testimonial>

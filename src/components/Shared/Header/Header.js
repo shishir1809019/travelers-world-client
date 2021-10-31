@@ -32,12 +32,12 @@ const Header = () => {
               <Nav.Link as={Link} to="/home#services">
                 Services
               </Nav.Link>
-              <Nav.Link as={Link} to="/blog">
+              {/* <Nav.Link as={Link} to="/blog">
                 Blog
               </Nav.Link>
               <Nav.Link as={Link} to="/about">
                 About
-              </Nav.Link>
+              </Nav.Link> */}
               {user.email && (
                 <Nav.Link as={Link} to="/addService">
                   Add New Service
