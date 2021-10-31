@@ -7,7 +7,7 @@ const MyBookings = () => {
   const { user } = useAuth();
   const [myBookings, setMyBookings] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders/${user.email}`)
+    fetch(`https://wicked-blood-69809.herokuapp.com/myOrders/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyBookings(data);
@@ -18,7 +18,7 @@ const MyBookings = () => {
     console.log(id);
     const proceed = window.confirm("Are you sure want to delete?");
     if (proceed) {
-      fetch(`http://localhost:5000/myOrder/${id}`, {
+      fetch(`https://wicked-blood-69809.herokuapp.com/booking/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

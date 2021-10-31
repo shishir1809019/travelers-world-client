@@ -17,7 +17,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand as={Link} to="/home">
-            Travellers world
+            Traveler's world
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
@@ -38,6 +38,11 @@ const Header = () => {
               <Nav.Link as={Link} to="/about">
                 About
               </Nav.Link>
+              {user.email && (
+                <Nav.Link as={Link} to="/addService">
+                  Add New Service
+                </Nav.Link>
+              )}
               {user.email && (
                 <Nav.Link as={Link} to="/myBookings">
                   My Bookings

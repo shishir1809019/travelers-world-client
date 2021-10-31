@@ -15,7 +15,7 @@ const MyBooking = (props) => {
             handleDeleteUser(_id);
           }}
         >
-          delete
+          Cancel
         </button>{" "}
       </td>
     </tr>

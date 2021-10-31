@@ -17,16 +17,17 @@ const BookNow = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/service/${id}`)
+    fetch(`https://wicked-blood-69809.herokuapp.com/service/${id}`)
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
 
   const { register, handleSubmit, watch } = useForm();
   const onSubmit = (data) => {
+    data.email = user.email;
     data.status = "pending";
     console.log(data);
-    fetch("http://localhost:5000/booking", {
+    fetch("https://wicked-blood-69809.herokuapp.com/booking", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -61,8 +62,9 @@ const BookNow = () => {
           />
           <input
             className="form-control"
-            defaultValue={user.email}
-            {...register("email")}
+            placeholder="Enter Your phone number"
+            type="number"
+            {...register("number")}
           />
           <input
             className="form-control"
@@ -80,7 +82,11 @@ const BookNow = () => {
             {...register("date", { required: true })}
           />{" "}
           <br />
-          <input className="form-control" type="submit" value="BOOK NOW" />
+          <input
+            className="form-control btn btn-outline-secondary"
+            type="submit"
+            value="BOOK NOW"
+          />
         </form>
       </div>
     </div>
