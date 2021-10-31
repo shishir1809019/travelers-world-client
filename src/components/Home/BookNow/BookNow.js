@@ -22,7 +22,7 @@ const BookNow = () => {
       .then((data) => setService(data));
   }, []);
 
-  const { register, handleSubmit, watch } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     data.email = user.email;
     data.status = "pending";
@@ -38,7 +38,7 @@ const BookNow = () => {
       .then((result) => {
         if (result.insertedId) {
           alert("Order proceed successfully");
-          // reset();
+          reset();
         }
       });
   };
